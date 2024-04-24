@@ -60,7 +60,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.0.0",
-    "lazy-js-utils": "^0.0.56",
+    "lazy-js-utils": "^0.0.92",
     "vue": "^3.2.41"
   },
   "devDependencies": {
