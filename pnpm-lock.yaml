@@ -1,7 +1,7 @@
 lockfileVersion: '6.0'
 
 settings:
-  autoInstallPeers: true
+  autoInstallPeers: false
   excludeLinksFromLockfile: false
 
 importers:
@@ -12,8 +12,8 @@ importers:
         specifier: ^9.0.0
         version: 9.7.0(vue@3.2.41)
       lazy-js-utils:
-        specifier: ^0.0.56
-        version: 0.0.56(vue@3.2.41)
+        specifier: ^0.0.92
+        version: 0.0.92(vue@3.2.41)
       vue:
         specifier: ^3.2.41
         version: 3.2.41
@@ -120,7 +120,7 @@ importers:
         version: 0.12.1(@vueuse/core@9.7.0)
       unplugin-vue-components:
         specifier: ^0.18.0
-        version: 0.18.5(esbuild@0.15.12)(vite@4.0.1)(vue@3.2.36)
+        version: 0.18.5(vite@4.0.1)(vue@3.2.36)
       vite:
         specifier: ^4.0.0
         version: 4.0.1(@types/node@18.11.16)
@@ -3865,6 +3865,16 @@ packages:
       domhandler: 5.0.3
       domutils: 3.0.1
       entities: 4.4.0
+    dev: true
+
+  /htmlparser2@8.0.2:
+    resolution: {integrity: sha512-GYdjWKDkbRLkZ5geuHs5NY1puJ+PXwP7+fHPRz06Eirsb9ugf6d8kkXav6ADhcODhFFPMIXyxkxSuMf3D6NCFA==}
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      domutils: 3.0.1
+      entities: 4.4.0
+    dev: false
 
   /http-proxy-agent@5.0.0:
     resolution: {integrity: sha512-n2hY8YdoRE1i7r6M0w9DIw5GgZN0G25P8zLCRQ8rjXtTU3vsNFBI/vWK/UIeE6g5MUUz6avwAPXmL6Fy9D/90w==}
@@ -4298,21 +4308,12 @@ packages:
     resolution: {integrity: sha512-dLkz37Ab97HWMx9KTes3Tbi3D1ln9fCAy2zr2YVExJasDRPGRaKcoE4fycWNtnCAJfjFqe0cnY+f8KT2JePEXQ==}
     dev: true
 
-  /lazy-js-utils@0.0.37(vue@3.2.41):
-    resolution: {integrity: sha512-kr6ehqgZmUDkBFUdFaOby43wZ/fdUODJVDRY4v0ZlGoTKTXZ/huea8Mu9LA2ThSt11URObpE+DMWS+IHBtKW2w==}
+  /lazy-js-utils@0.0.92(vue@3.2.41):
+    resolution: {integrity: sha512-7lo+PmYlPFNQkdBPrDPp5a1VbrWif9bWanBNefR4ePUINzWyeR2hCVXmGBI/zMgK+qTd1lk4oOMV+T1RojyupA==}
     peerDependencies:
       vue: ^3.2.41
     dependencies:
-      vue: 3.2.41
-    dev: false
-
-  /lazy-js-utils@0.0.56(vue@3.2.41):
-    resolution: {integrity: sha512-Nv0Gq5clx3adqxlZMFKFT+/DbkosNYPNnfwY9QjMcmg0h925uL+/mW0Ik+A3owpSDOtGqSwADnonTjkxLkYIRQ==}
-    peerDependencies:
-      vue: ^3.2.41
-    dependencies:
-      htmlparser2: 8.0.1
-      lazy-js-utils: 0.0.37(vue@3.2.41)
+      htmlparser2: 8.0.2
       qrcode: 1.5.3
       spark-md5: 3.0.2
       vue: 3.2.41
@@ -5763,7 +5764,7 @@ packages:
       - rollup
     dev: true
 
-  /unplugin-vue-components@0.18.5(esbuild@0.15.12)(vite@4.0.1)(vue@3.2.36):
+  /unplugin-vue-components@0.18.5(vite@4.0.1)(vue@3.2.36):
     resolution: {integrity: sha512-VPA6z/4pcKRDYtWu1H+FIpV0MADlFKG3q7YMVFzNFC3EhMVZ4WuBJ76490oKyauguNw1T1obLCuxNU9JzJ0oAQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -5785,7 +5786,7 @@ packages:
       magic-string: 0.26.7
       minimatch: 5.1.2
       resolve: 1.22.1
-      unplugin: 0.4.0(esbuild@0.15.12)(vite@4.0.1)
+      unplugin: 0.4.0(vite@4.0.1)
       vue: 3.2.36
     transitivePeerDependencies:
       - esbuild
@@ -5795,7 +5796,7 @@ packages:
       - webpack
     dev: true
 
-  /unplugin@0.4.0(esbuild@0.15.12)(vite@4.0.1):
+  /unplugin@0.4.0(vite@4.0.1):
     resolution: {integrity: sha512-4ScITEmzlz1iZW3tkz+3L1V5k/xMQ6kjgm4lEXKxH0ozd8/OUWfiSA7RMRyrawsvq/t50JIzPpp1UyuSL/AXkA==}
     peerDependencies:
       esbuild: '>=0.13'
@@ -5813,7 +5814,6 @@ packages:
         optional: true
     dependencies:
       chokidar: 3.5.3
-      esbuild: 0.15.12
       vite: 4.0.1(@types/node@18.11.16)
       webpack-virtual-modules: 0.4.6
     dev: true
